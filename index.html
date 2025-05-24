@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HyperMart</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
     <div class="content">
@@ -64,13 +66,13 @@
 {id:2, customer:0, items:0},
 {id:3, customer:0, items:0}
     ]
-function setcounter(a){
+function setcounter(number){
     //make sure a is integer
     // alert(itemcount)
-   const itemcount= parseInt(a.value);
+   const itemcount= parseInt(number.value);
    if(itemcount<=0){
     alert("Please enter a valid number");
-  a.value=""
+  number.value=""
     return;
    }
 //    alert(itemcount);
@@ -89,10 +91,10 @@ card.querySelector(".total-items").textContent=`Total items : ${tcheckout.items}
 
 const listC= document.getElementById(`customer-list${tcheckout.id}`);
 const c= document.createElement("p");
-c.textContent=`${itemcount} items`;
+c.innerHTML = `<i class="fa fa-shopping-cart"></i> ${itemcount} items`;
 listC.appendChild(c);
 
-a.value="";
+number.value="";
 }
 
 
