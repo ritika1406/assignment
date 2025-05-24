@@ -8,9 +8,28 @@
 
 .counters{
     display: flex;
+    margin-top: 1rem;
     
 }
 
+.button-content{
+  
+
+}
+.cbutton{
+    background-color:rgb(114, 114, 231);
+    padding:.8rem;
+    border:none;
+    color:white;
+    border-radius: 10px;
+    
+}
+input{
+    padding:.8rem;
+     border-radius: 10px;
+     border:none;
+     
+}
 
 .cards{
     width: 40%;
@@ -19,6 +38,8 @@
     margin:.6rem;
     padding:1rem;
     background-color: white;
+    box-shadow:2px 1px #e5e5e5;
+
 }
 .tag{
     display: flex;
@@ -28,4 +49,14 @@
 }
 .customer-count{
 margin-left: auto;
+}
+.customers-list p{
+padding:.8rem;
+text-align: left;
+background-color: rgb(243, 243, 243);
+border-radius: 10px;
+}
+
+.total-items, .customercount{
+    font-weight: 400;
 }
