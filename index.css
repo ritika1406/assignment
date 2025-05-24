@@ -1,0 +1,31 @@
+.content{
+    width: 80%;
+    margin:auto;
+    text-align: center;
+    background-color: aliceblue;
+    padding:2rem;
+}
+
+.counters{
+    display: flex;
+    
+}
+
+
+.cards{
+    width: 40%;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    margin:.6rem;
+    padding:1rem;
+    background-color: white;
+}
+.tag{
+    display: flex;
+}
+.tag h4{
+    margin-right: .3rem;
+}
+.customer-count{
+margin-left: auto;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HyperMart</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="content">
+    <div>
+    <div class="header-tagscenter" >
+        <h3>HyperMart Checkout System</h3>
+        <p>Real-time queue management system</p>
+    </div>
+    <div class="button">
+        <input type="number" placeholder="Enter number of items" name="number-items" id="number-items">
+        <button type="button" onclick="setcounter(document.getElementById('number-items'))">Checkout Items</button>
+    </div>
+
+</div>
+<div class="counters">
+    <div class="cards" id="counter1">
+        <div class="tag"> <h4>Counter 1</h4>
+        <h5 class="customer-count"><i class="material-icons">people_outline</i><span class="customercount">0 customers</span></h5>
+        </div>
+        <div class="customers-list" id="customer-list1">
+        <icon></icon>
+        <p>No of items</p>
+        </div>
+        <h4 class="total-items">Total items: 0</h4>
+       
+        
+    </div>
+    <div class="cards" id="counter2">
+        <div class="tag"> <h4>Counter 2</h4>
+        <h5 class="customer-count">0 customers</h5>
+        </div>
+        <div class="customers-list" id="customer-list2">
+        <icon></icon>
+        <p>No of items</p>
+        </div>
+        <h4 class="total-items">Total items: 0</h4>
+       
+        
+    </div> <div class="cards" id="counter3">
+        <div class="tag"> <h4>Counter 3</h4>
+        <h5 class="customer-count">0 customers</h5>
+        </div>
+        <div class="customers-list" id="customer-list3">
+        <icon></icon>
+        <p>No of items</p>
+        </div>
+        <h4 class="total-items">Total items: 0</h4>
+       
+        
+    </div>
+</div>
+</div>
+</body>
+<script>
+    const checkouts=[
+{id:1, customer:0, items:0},
+{id:2, customer:0, items:0},
+{id:3, customer:0, items:0}
+    ]
+function setcounter(a){
+    //make sure a is integer
+    // alert(itemcount)
+   const itemcount= parseInt(a.value);
+   if(itemcount<=0){
+    alert("Please enter a valid number");
+  a.value=""
+    return;
+   }
+//    alert(itemcount);
+    let tcheckout= checkouts[0];
+for(a of checkouts){
+    if(a.items <tcheckout.items){
+        tcheckout=a;
+    }
+
+}
+tcheckout.customer +=1;
+tcheckout.items +=itemcount;
+const card = document.getElementById(`counter${tcheckout.id}`);
+card.querySelector(".customer-count").textContent=`${tcheckout.customer} customers`;
+card.querySelector(".total-items").textContent=`Total items : ${tcheckout.items}`;
+
+const listC= document.getElementById(`customer-list${tcheckout.id}`);
+const c= document.createElement("p");
+c.textContent=`${itemcount} items`;
+listC.appendChild(c);
+
+a.value="";
+}
+
+
+    </script>
+</html>
+
