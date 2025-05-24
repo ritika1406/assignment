@@ -1,62 +1,65 @@
-.content{
+.content {
     width: 80%;
-    margin:auto;
+    margin: auto;
     text-align: center;
     background-color: aliceblue;
-    padding:2rem;
+    padding: 2rem;
 }
 
-.counters{
+.counters {
     display: flex;
     margin-top: 1rem;
-    
-}
-
-.button-content{
-  
 
 }
-.cbutton{
-    background-color:rgb(114, 114, 231);
-    padding:.8rem;
-    border:none;
-    color:white;
+
+
+.cbutton {
+    background-color: rgb(114, 114, 231);
+    padding: .8rem;
+    border: none;
+    color: white;
     border-radius: 10px;
-    
-}
-input{
-    padding:.8rem;
-     border-radius: 10px;
-     border:none;
-     
+
 }
 
-.cards{
+input {
+    padding: .8rem;
+    border-radius: 10px;
+    border: none;
+
+}
+
+.cards {
     width: 40%;
     border: 2px solid rgb(255, 255, 255);
     border-radius: 10px;
-    margin:.6rem;
-    padding:1rem;
+    margin: .6rem;
+    padding: 1rem;
     background-color: white;
-    box-shadow:2px 1px #e5e5e5;
+    box-shadow: 2px 1px #e5e5e5;
 
 }
-.tag{
+
+.tag {
     display: flex;
 }
-.tag h4{
+
+.tag h4 {
     margin-right: .3rem;
 }
-.customer-count{
-margin-left: auto;
-}
-.customers-list p{
-padding:.8rem;
-text-align: left;
-background-color: rgb(243, 243, 243);
-border-radius: 10px;
+
+.customer-count {
+    margin-left: auto;
 }
 
-.total-items, .customercount{
+.customers-list p {
+    padding: .8rem;
+    text-align: left;
+    background-color: rgb(243, 243, 243);
+    border-radius: 10px;
+}
+
+.total-items,
+.customercount {
     font-weight: 400;
 }
